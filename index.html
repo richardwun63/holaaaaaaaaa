@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas ERP Ayacucho V5.2 - Modales Implementados</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div id="login-screen" class="screen active"> <div class="auth-container"> </div> </div>
+
+    <div id="register-screen" class="screen"> <div class="auth-container"> </div> </div>
+
+    <div id="app-container" class="app-container-hidden"> <header id="app-header"> </header> <main id="main-content"></main> <footer id="app-footer"> </footer> </div>
+
+    <template id="cliente-dashboard"> </template>
+    <template id="repartidor-dashboard"> </template>
+    <template id="base-dashboard"> </template>
+    <template id="contabilidad-dashboard"> </template>
+    <template id="gerente-dashboard"> </template>
+
+    <div id="benefits-modal" class="modal"><div class="modal-content"></div></div>
+    <div id="assign-delivery-modal" class="modal"><div class="modal-content"></div></div>
+    <div id="edit-customer-prices-modal" class="modal"><div class="modal-content"></div></div>
+    <div id="view-details-modal" class="modal"><div class="modal-content"></div></div> <div id="create-user-modal" class="modal">
+        <div class="modal-content">
+             <span class="close-button" onclick="closeModal('create-user-modal')">×</span>
+             <h2><i class="fas fa-user-plus"></i> Crear Empleado</h2>
+             <form id="create-user-form-gerente"> <div class="input-group"> <label for="create-fullname">Nombre Completo:</label> <input type="text" id="create-fullname" name="full_name" required> </div>
+                 <div class="input-group"> <label for="create-username">Username (Login):</label> <input type="text" id="create-username" name="username" required> </div>
+                 <div class="input-group"> <label for="create-password">Contraseña Temporal:</label> <input type="password" id="create-password" name="password" required> </div>
+                 <div class="input-group"> <label for="create-role">Rol:</label> <select id="create-role" name="role_name" required> <option value="" disabled selected>-- Rol --</option> <option value="repartidor">Repartidor</option> <option value="base">Base</option> <option value="contabilidad">Contabilidad</option> <option value="gerente">Gerente</option> </select> </div>
+                 <div class="input-group"> <label for="create-phone">Celular Principal:</label> <input type="tel" id="create-phone" name="phone_number_primary"> </div>
+                 <div class="input-group"> <label for="create-warehouse">Almacén Predet.:</label> <select id="create-warehouse" name="default_warehouse_id"> <option value="">-- Ninguno --</option> </select> </div>
+                 <button type="submit" class="btn btn-primary">Crear Empleado</button>
+             </form>
+             <div id="create-user-error" class="error-message"></div>
+         </div>
+    </div>
+
+    <div id="edit-user-modal" class="modal"><div class="modal-content"></div></div>
+
+    <div id="edit-schedule-modal" class="modal"><div class="modal-content"></div></div>
+
+    <div id="edit-profile-modal" class="modal"><div class="modal-content"></div></div>
+
+    <div id="warehouse-modal" class="modal"><div class="modal-content"></div></div>
+
+    <div id="other-product-modal" class="modal"><div class="modal-content"></div></div>
+
+    <div id="adjust-stock-modal" class="modal"><div class="modal-content"></div></div>
+
+    <div id="adjust-points-modal" class="modal"><div class="modal-content"></div></div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
